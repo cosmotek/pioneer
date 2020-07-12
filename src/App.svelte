@@ -1,5 +1,15 @@
 <script>
-	export let name;
+	let form = {
+		name: null,
+		companyName: null,
+		email: null,
+		website: null,
+	};
+
+// https://turbulent.ca/join-us/
+	function submitForm() {
+		console.log(form);
+	}
 </script>
 
 <main>
@@ -9,10 +19,10 @@
 	<br/>
 	<div>
 		<h2>The Basics</h2>
-		<input placeholder="Name"/>
-		<input placeholder="Company"/>
-		<input placeholder="Email"/>
-		<input placeholder="Website or LinkedIn (Optional)"/>
+		<input placeholder="Name" bind:value={form.name}/>
+		<input placeholder="Company" bind:value={form.companyName}/>
+		<input placeholder="Email" bind:value={form.email}/>
+		<input placeholder="Website or LinkedIn (Optional)" bind:value={form.website}/>
 	</div>
 
 	<div>
@@ -23,8 +33,8 @@
 			<li>Improve the efficiency of my digital ecosystem</li>
 			<li>Improve my engagement</li>
 			<li>Gather insights about my customers</li>
-			<li>Create a new digital project</li>
-			<li>Other</li>
+			<li><input type="checkbox"/> Create a new digital project</li>
+			<li><input placeholder="Other"/></li>
 		</ul>
 	</div>
 
@@ -60,7 +70,7 @@
 		</ul>
 	</div>
 
-	<button>submit</button>
+	<button on:click={submitForm}>submit</button>
 </main>
 
 <style>
