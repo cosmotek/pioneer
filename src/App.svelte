@@ -7,6 +7,15 @@
 	};
 
 // https://turbulent.ca/join-us/
+// https://www.netguru.com/
+// https://transcend.io/
+// http://wiseslang.com/
+// https://together.agency/
+// https://madebyshape.co.uk/hex-test/play/
+// https://www.swipsh.com/
+// https://www.thedigitalpanda.com/works
+// https://blab.studio/
+
 	function submitForm() {
 		console.log(form);
 	}
